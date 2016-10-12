@@ -1,0 +1,15 @@
+platform:ios, ‘9.0’
+#use_frameworks!
+#source 'http://git.oschina.net/akuandev/Specs.git'
+
+target ’SooLeDevelopmentOC’ do
+pod 'SVProgressHUD'
+pod 'AFNetworking'
+pod 'SDWebImage'
+pod 'Masonry'
+pod 'YYKit'
+pod ‘BlocksKit’
+pod ‘MBProgressHUD’
+pod ‘FMDB’
+
+end

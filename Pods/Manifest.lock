@@ -1,0 +1,67 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - BlocksKit (2.2.5):
+    - BlocksKit/All (= 2.2.5)
+  - BlocksKit/All (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.5)
+  - BlocksKit/DynamicDelegate (2.2.5)
+  - BlocksKit/MessageUI (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/UIKit (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - Masonry (1.0.1)
+  - MBProgressHUD (1.0.0)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
+  - SVProgressHUD (2.0.3)
+  - YYKit (1.0.7):
+    - YYKit/no-arc (= 1.0.7)
+  - YYKit/no-arc (1.0.7)
+
+DEPENDENCIES:
+  - AFNetworking
+  - BlocksKit
+  - FMDB
+  - Masonry
+  - MBProgressHUD
+  - SDWebImage
+  - SVProgressHUD
+  - YYKit
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  YYKit: 843d1b26e20b82c695790c9a89907eaa1e99907f
+
+PODFILE CHECKSUM: 5850b36a9440f20ee594826d68d576323710b2ef
+
+COCOAPODS: 1.0.1
