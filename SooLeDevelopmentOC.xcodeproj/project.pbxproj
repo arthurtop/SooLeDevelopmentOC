@@ -19,6 +19,9 @@
 
 /* Begin PBXFileReference section */
 		05C100A4EE8B088764C79F8E /* Pods-SooLeDevelopmentOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SooLeDevelopmentOC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SooLeDevelopmentOC/Pods-SooLeDevelopmentOC.debug.xcconfig"; sourceTree = "<group>"; };
+		5EAA68D81DB51EFD00633D42 /* SooLePrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SooLePrefixHeader.pch; sourceTree = "<group>"; };
+		5EAA68D91DB5230500633D42 /* AttributeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttributeHeader.h; sourceTree = "<group>"; };
+		5EAA68DA1DB5236000633D42 /* SystemHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemHeader.h; sourceTree = "<group>"; };
 		83DA4355E328BDBB146E3B65 /* libPods-SooLeDevelopmentOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SooLeDevelopmentOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6782907271CD5F3C243C353 /* Pods-SooLeDevelopmentOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SooLeDevelopmentOC.release.xcconfig"; path = "Pods/Target Support Files/Pods-SooLeDevelopmentOC/Pods-SooLeDevelopmentOC.release.xcconfig"; sourceTree = "<group>"; };
 		CD5380E21DADEBC500F3031E /* SooLeDevelopmentOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SooLeDevelopmentOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +50,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EAA68D61DB51E8E00633D42 /* CommitTools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CommitTools;
+			sourceTree = "<group>";
+		};
+		5EAA68D71DB51EC800633D42 /* CommitClass */ = {
+			isa = PBXGroup;
+			children = (
+				5EAA68D81DB51EFD00633D42 /* SooLePrefixHeader.pch */,
+				5EAA68D91DB5230500633D42 /* AttributeHeader.h */,
+				5EAA68DA1DB5236000633D42 /* SystemHeader.h */,
+			);
+			path = CommitClass;
+			sourceTree = "<group>";
+		};
 		75426DB70F003C169363DD6F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +109,7 @@
 				CD5380E91DADEBC500F3031E /* AppDelegate.m */,
 				CD5380EB1DADEBC500F3031E /* ViewController.h */,
 				CD5380EC1DADEBC500F3031E /* ViewController.m */,
+				5EAA68D71DB51EC800633D42 /* CommitClass */,
 				CD5381201DADF82100F3031E /* Class */,
 				CD53811F1DADF81B00F3031E /* SooLeTools */,
 				CD5380EE1DADEBC500F3031E /* Main.storyboard */,
@@ -111,6 +132,7 @@
 		CD53811F1DADF81B00F3031E /* SooLeTools */ = {
 			isa = PBXGroup;
 			children = (
+				5EAA68D61DB51E8E00633D42 /* CommitTools */,
 				CD5381211DADF84000F3031E /* NetworkTools */,
 			);
 			path = SooLeTools;
@@ -380,7 +402,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UDU2Q37R58;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SooLeDevelopmentOC/CommitClass/SooLePrefixHeader.pch";
 				INFOPLIST_FILE = SooLeDevelopmentOC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.songlei.SooLeDevelopmentOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -393,7 +417,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UDU2Q37R58;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SooLeDevelopmentOC/CommitClass/SooLePrefixHeader.pch";
 				INFOPLIST_FILE = SooLeDevelopmentOC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.songlei.SooLeDevelopmentOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -1,0 +1,23 @@
+//
+//  SooLePrefixHeader.pch
+//  SooLeDevelopmentOC
+//
+//  Created by songlei on 2016/10/17.
+//  Copyright © 2016年 songlei. All rights reserved.
+//
+
+#ifndef SooLePrefixHeader_pch
+#define SooLePrefixHeader_pch
+
+
+#import "AttributeHeader.h"
+#import "SystemHeader.h"
+
+
+
+
+
+
+
+
+#endif /* SooLePrefixHeader_pch */
