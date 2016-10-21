@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		37DE243A1C810F9070C48D9E /* libPods-SooLeDevelopmentOC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DA4355E328BDBB146E3B65 /* libPods-SooLeDevelopmentOC.a */; };
+		CD0348B41DBA170500581757 /* TouchIDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0348B31DBA170500581757 /* TouchIDHelper.m */; };
 		CD5380E71DADEBC500F3031E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5380E61DADEBC500F3031E /* main.m */; };
 		CD5380EA1DADEBC500F3031E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5380E91DADEBC500F3031E /* AppDelegate.m */; };
 		CD5380ED1DADEBC500F3031E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5380EC1DADEBC500F3031E /* ViewController.m */; };
@@ -24,6 +25,8 @@
 		5EAA68DA1DB5236000633D42 /* SystemHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemHeader.h; sourceTree = "<group>"; };
 		83DA4355E328BDBB146E3B65 /* libPods-SooLeDevelopmentOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SooLeDevelopmentOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6782907271CD5F3C243C353 /* Pods-SooLeDevelopmentOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SooLeDevelopmentOC.release.xcconfig"; path = "Pods/Target Support Files/Pods-SooLeDevelopmentOC/Pods-SooLeDevelopmentOC.release.xcconfig"; sourceTree = "<group>"; };
+		CD0348B21DBA170500581757 /* TouchIDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchIDHelper.h; sourceTree = "<group>"; };
+		CD0348B31DBA170500581757 /* TouchIDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchIDHelper.m; sourceTree = "<group>"; };
 		CD5380E21DADEBC500F3031E /* SooLeDevelopmentOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SooLeDevelopmentOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5380E61DADEBC500F3031E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD5380E81DADEBC500F3031E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,6 +87,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CD0348B11DBA16A400581757 /* VerificaTouchID */ = {
+			isa = PBXGroup;
+			children = (
+				CD0348B21DBA170500581757 /* TouchIDHelper.h */,
+				CD0348B31DBA170500581757 /* TouchIDHelper.m */,
+			);
+			path = VerificaTouchID;
+			sourceTree = "<group>";
+		};
 		CD5380D91DADEBC500F3031E = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +144,7 @@
 		CD53811F1DADF81B00F3031E /* SooLeTools */ = {
 			isa = PBXGroup;
 			children = (
+				CD0348B11DBA16A400581757 /* VerificaTouchID */,
 				5EAA68D61DB51E8E00633D42 /* CommitTools */,
 				CD5381211DADF84000F3031E /* NetworkTools */,
 			);
@@ -277,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD0348B41DBA170500581757 /* TouchIDHelper.m in Sources */,
 				CD5380ED1DADEBC500F3031E /* ViewController.m in Sources */,
 				CD5380EA1DADEBC500F3031E /* AppDelegate.m in Sources */,
 				CD5380E71DADEBC500F3031E /* main.m in Sources */,
