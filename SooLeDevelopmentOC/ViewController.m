@@ -7,16 +7,19 @@
 //
 
 #import "ViewController.h"
+#import "PYSearch.h"
+
 
 #define TableViewCellID @"TableViewCellID"
 
 
-
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate,PYSearchViewControllerDelegate>
 
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSArray *dataArr;
+
+@property (nonatomic, strong) NSArray *titleArr;
+@property (nonatomic, strong) NSArray *ctlNameArr;
 
 
 @end
@@ -38,17 +41,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.dataArr = @[@"test1",@"test2",@"text3"];
+    self.titleArr = @[@"搜索功能",@"test2",@"text3"];
+    
+    
+    
     
     
     [self.view addSubview:self.tableView];
     
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(100, 100, 60, 60);
-    btn.backgroundColor = [UIColor redColor];
-    [btn setTitle:@"test" forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(test:) forControlEvents:UIControlEventTouchUpInside];
-    //[self.view addSubview:btn];
+   
     
     
 }
@@ -58,7 +59,7 @@
 
 #pragma mark- datasoure
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _dataArr.count;
+    return _titleArr.count;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -72,18 +73,65 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     
-    cell.textLabel.text = _dataArr[indexPath.row];
+    cell.textLabel.text = _titleArr[indexPath.row];
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSInteger index = indexPath.item;
+    switch (index) {
+        case 0:
+            [self didSeclectedPYSearch];
+            break;
+        case 1:
+            
+            break;
+            
+        case 2:
+            
+            break;
+            
+        case 3:
+            
+            break;
+            
+            
+        default:
+            break;
+    }
+    
+}
+
+
+#pragma mark- PY 搜索栏  和代理
+- (void)didSeclectedPYSearch{
+    
+    NSArray *hotSearch = @[@"Java",@"objective-c",@"swift",@"c"];
+    
+    PYSearchViewController *searchCtl = [PYSearchViewController searchViewControllerWithHotSearches:hotSearch searchBarPlaceholder:@"搜索编辑语言" didSearchBlock:^(PYSearchViewController *searchViewController, UISearchBar *searchBar, NSString *searchText) {
+        
+        searchCtl.searchResultController.title = @"PYsearchResult";
+        
+    }];
+    
+    searchCtl.delegate = self;
+    searchCtl.searchHistoryStyle = PYSearchHistoryStyleDefault;
+    searchCtl.hotSearchStyle = PYHotSearchStyleDefault;
+    
+    UINavigationController *navCtl = [[UINavigationController alloc]initWithRootViewController:searchCtl];
+    navCtl.navigationBar.barTintColor = [UIColor redColor];
+    
+    [self presentViewController:navCtl animated:YES completion:nil];
     
     
     
 }
 
-
+- (void)searchViewController:(PYSearchViewController *)searchViewController searchTextDidChange:(UISearchBar *)seachBar searchText:(NSString *)searchText{
+    
+    
+}
 
 
 
