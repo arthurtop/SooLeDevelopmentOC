@@ -14,6 +14,9 @@
 		5E080D941DC3A20E00B5EF96 /* PYSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E080D8C1DC3A20E00B5EF96 /* PYSearchViewController.m */; };
 		5E080D951DC3A20E00B5EF96 /* UIColor+PYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E080D8E1DC3A20E00B5EF96 /* UIColor+PYExtension.m */; };
 		5E080D961DC3A20E00B5EF96 /* UIView+PYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E080D901DC3A20E00B5EF96 /* UIView+PYExtension.m */; };
+		5E7766C41DE052980018E2F4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E7766C31DE052980018E2F4 /* AVFoundation.framework */; };
+		5E7766C71DE0533C0018E2F4 /* WordChangeSpeech.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7766C61DE0533C0018E2F4 /* WordChangeSpeech.m */; };
+		5EEC2C6F1DC4420100C8BE55 /* LBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC2C6E1DC4420100C8BE55 /* LBViewController.m */; };
 		CD0348B41DBA170500581757 /* TouchIDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0348B31DBA170500581757 /* TouchIDHelper.m */; };
 		CD5380E71DADEBC500F3031E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5380E61DADEBC500F3031E /* main.m */; };
 		CD5380EA1DADEBC500F3031E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5380E91DADEBC500F3031E /* AppDelegate.m */; };
@@ -38,9 +41,15 @@
 		5E080D8E1DC3A20E00B5EF96 /* UIColor+PYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PYExtension.m"; sourceTree = "<group>"; };
 		5E080D8F1DC3A20E00B5EF96 /* UIView+PYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PYExtension.h"; sourceTree = "<group>"; };
 		5E080D901DC3A20E00B5EF96 /* UIView+PYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PYExtension.m"; sourceTree = "<group>"; };
+		5E080D9E1DC43EAD00B5EF96 /* ThirdPartyHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdPartyHeader.h; sourceTree = "<group>"; };
+		5E7766C31DE052980018E2F4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5E7766C51DE0533C0018E2F4 /* WordChangeSpeech.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordChangeSpeech.h; sourceTree = "<group>"; };
+		5E7766C61DE0533C0018E2F4 /* WordChangeSpeech.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordChangeSpeech.m; sourceTree = "<group>"; };
 		5EAA68D81DB51EFD00633D42 /* SooLePrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SooLePrefixHeader.pch; sourceTree = "<group>"; };
 		5EAA68D91DB5230500633D42 /* AttributeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttributeHeader.h; sourceTree = "<group>"; };
 		5EAA68DA1DB5236000633D42 /* SystemHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemHeader.h; sourceTree = "<group>"; };
+		5EEC2C6D1DC4420100C8BE55 /* LBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBViewController.h; sourceTree = "<group>"; };
+		5EEC2C6E1DC4420100C8BE55 /* LBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBViewController.m; sourceTree = "<group>"; };
 		83DA4355E328BDBB146E3B65 /* libPods-SooLeDevelopmentOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SooLeDevelopmentOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6782907271CD5F3C243C353 /* Pods-SooLeDevelopmentOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SooLeDevelopmentOC.release.xcconfig"; path = "Pods/Target Support Files/Pods-SooLeDevelopmentOC/Pods-SooLeDevelopmentOC.release.xcconfig"; sourceTree = "<group>"; };
 		CD0348B21DBA170500581757 /* TouchIDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchIDHelper.h; sourceTree = "<group>"; };
@@ -64,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E7766C41DE052980018E2F4 /* AVFoundation.framework in Frameworks */,
 				37DE243A1C810F9070C48D9E /* libPods-SooLeDevelopmentOC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +108,57 @@
 			path = PYSearch;
 			sourceTree = "<group>";
 		};
+		5E080D991DC43E2A00B5EF96 /* ClassMVC */ = {
+			isa = PBXGroup;
+			children = (
+				5E7766C21DE051C80018E2F4 /* 语音 */,
+				5E080D9A1DC43E2A00B5EF96 /* 轮播和瀑布流 */,
+			);
+			path = ClassMVC;
+			sourceTree = "<group>";
+		};
+		5E080D9A1DC43E2A00B5EF96 /* 轮播和瀑布流 */ = {
+			isa = PBXGroup;
+			children = (
+				5E080D9B1DC43E2A00B5EF96 /* Controller */,
+				5E080D9C1DC43E2A00B5EF96 /* Model */,
+				5E080D9D1DC43E2A00B5EF96 /* VIew */,
+			);
+			path = "轮播和瀑布流";
+			sourceTree = "<group>";
+		};
+		5E080D9B1DC43E2A00B5EF96 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5EEC2C6D1DC4420100C8BE55 /* LBViewController.h */,
+				5EEC2C6E1DC4420100C8BE55 /* LBViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5E080D9C1DC43E2A00B5EF96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5E080D9D1DC43E2A00B5EF96 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
+		5E7766C21DE051C80018E2F4 /* 语音 */ = {
+			isa = PBXGroup;
+			children = (
+				5E7766C51DE0533C0018E2F4 /* WordChangeSpeech.h */,
+				5E7766C61DE0533C0018E2F4 /* WordChangeSpeech.m */,
+			);
+			path = "语音";
+			sourceTree = "<group>";
+		};
 		5EAA68D61DB51E8E00633D42 /* CommitTools */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +172,7 @@
 				5EAA68D81DB51EFD00633D42 /* SooLePrefixHeader.pch */,
 				5EAA68D91DB5230500633D42 /* AttributeHeader.h */,
 				5EAA68DA1DB5236000633D42 /* SystemHeader.h */,
+				5E080D9E1DC43EAD00B5EF96 /* ThirdPartyHeader.h */,
 			);
 			path = CommitClass;
 			sourceTree = "<group>";
@@ -127,6 +189,7 @@
 		82A40EF980CFDF06D344F7D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E7766C31DE052980018E2F4 /* AVFoundation.framework */,
 				83DA4355E328BDBB146E3B65 /* libPods-SooLeDevelopmentOC.a */,
 			);
 			name = Frameworks;
@@ -166,8 +229,8 @@
 				CD5380E91DADEBC500F3031E /* AppDelegate.m */,
 				CD5380EB1DADEBC500F3031E /* ViewController.h */,
 				CD5380EC1DADEBC500F3031E /* ViewController.m */,
+				5E080D991DC43E2A00B5EF96 /* ClassMVC */,
 				5EAA68D71DB51EC800633D42 /* CommitClass */,
-				CD5381201DADF82100F3031E /* Class */,
 				CD53811F1DADF81B00F3031E /* SooLeTools */,
 				5E080D6A1DC33A9C00B5EF96 /* OthersLibrary */,
 				CD5380EE1DADEBC500F3031E /* Main.storyboard */,
@@ -195,13 +258,6 @@
 				CD5381211DADF84000F3031E /* NetworkTools */,
 			);
 			path = SooLeTools;
-			sourceTree = "<group>";
-		};
-		CD5381201DADF82100F3031E /* Class */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Class;
 			sourceTree = "<group>";
 		};
 		CD5381211DADF84000F3031E /* NetworkTools */ = {
@@ -337,12 +393,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EEC2C6F1DC4420100C8BE55 /* LBViewController.m in Sources */,
 				5E080D951DC3A20E00B5EF96 /* UIColor+PYExtension.m in Sources */,
 				5E080D921DC3A20E00B5EF96 /* PYSearchConst.m in Sources */,
 				5E080D941DC3A20E00B5EF96 /* PYSearchViewController.m in Sources */,
 				CD0348B41DBA170500581757 /* TouchIDHelper.m in Sources */,
 				CD5380ED1DADEBC500F3031E /* ViewController.m in Sources */,
 				CD5380EA1DADEBC500F3031E /* AppDelegate.m in Sources */,
+				5E7766C71DE0533C0018E2F4 /* WordChangeSpeech.m in Sources */,
 				CD5380E71DADEBC500F3031E /* main.m in Sources */,
 				CD5381241DADF85400F3031E /* JDHttpManager.m in Sources */,
 				5E080D931DC3A20E00B5EF96 /* PYSearchSuggestionViewController.m in Sources */,

@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import "PYSearch.h"
+#import "LBViewController.h"
+#import "WordChangeSpeech.h"
+
 
 
 #define TableViewCellID @"TableViewCellID"
@@ -42,7 +45,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.titleArr = @[@"搜索功能",@"test2",@"text3"];
+    self.titleArr = @[@"搜索功能",@"无线轮播和瀑布流",@"文字报语音"];
     
     
     
@@ -86,11 +89,11 @@
             [self didSeclectedPYSearch];
             break;
         case 1:
-            
+            [self limitCollectionView];
             break;
             
         case 2:
-            
+            [self AVVoide];
             break;
             
         case 3:
@@ -125,19 +128,32 @@
     
     [self presentViewController:navCtl animated:YES completion:nil];
     
+}
+
+/** 搜索框文本变化时，显示的搜索建议通过searchViewController的searchSuggestions赋值即可 */
+- (void)searchViewController:(PYSearchViewController *)searchViewController searchTextDidChange:(UISearchBar *)seachBar searchText:(NSString *)searchText{
     
     
 }
 
-//- (void)searchViewController:(PYSearchViewController *)searchViewController searchTextDidChange:(UISearchBar *)seachBar searchText:(NSString *)searchText{
-//    
-//    
-//}
 
+#pragma mark- 无线轮播  瀑布流
+- (void)limitCollectionView{
+    
+    LBViewController *lbCtl = [[LBViewController alloc]init];
+    
+    [self.navigationController pushViewController:lbCtl animated:YES];
+    
+}
 
-
-
-
+#pragma mark- 语音播报
+- (void)AVVoide{
+    
+    WordChangeSpeech *speech = [[WordChangeSpeech alloc]init];
+    
+    [speech read:@"大兄弟你好啊哈哈哈"];
+    
+}
 
 
 
