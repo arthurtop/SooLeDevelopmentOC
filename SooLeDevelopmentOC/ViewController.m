@@ -10,8 +10,9 @@
 #import "PYSearch.h"
 #import "LBViewController.h"
 #import "WordChangeSpeech.h"
-
-
+#import "SensorViewController.h"
+#import "MenuItemViewController.h"
+#import "LoveViewController.h"
 
 #define TableViewCellID @"TableViewCellID"
 
@@ -45,7 +46,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.titleArr = @[@"搜索功能",@"无线轮播和瀑布流",@"文字报语音"];
+    self.titleArr = @[@"搜索功能",@"无线轮播和瀑布流",@"文字报语音",@"转移字符串",@"蓝牙设置",@"传感器",@"多级列表",@"星星✨"];
     
     
     
@@ -76,6 +77,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     cell.textLabel.text = _titleArr[indexPath.row];
     
@@ -97,15 +99,57 @@
             break;
             
         case 3:
-            
+            [self testUserName:@"123*3# &&67sda"];
             break;
+        case 4:
+            [self testUserName:@"123*3# &&67sda"];
+            break;
+        case 5:{
+            SensorViewController *sensor = [[SensorViewController alloc]init];
+            [self.navigationController pushViewController:sensor animated:YES];
             
+        }
+            break;
+        case 6:{
+            MenuItemViewController *sensor = [[MenuItemViewController alloc]init];
+            [self.navigationController pushViewController:sensor animated:YES];
             
+        }
+            break;
+        case 7:{
+            LoveViewController *sensor = [[LoveViewController alloc]init];
+            [self.navigationController pushViewController:sensor animated:YES];
+            
+        }
+            break;
         default:
             break;
     }
     
 }
+
+
+
+#pragma mark- xlz 用户名的限制
+- (BOOL)testUserName:(NSString *)str{
+    
+//    NSArray *array = @[@"~",@" ",@"!",@"@",@"#",@"$",@"%",
+//                       @"^",@"&",@"*",@"丶",@"?",@"-",@":",
+//                       @";",@"'",@"}",@"{",@"[",@"]",@"(",@")"];
+//    
+//    NSRange range = [str rangeOfString:@" "];
+//    for (int j = 0; j < array.count; j++) {
+//        if (range.location != NSNotFound) {
+//            return YES; //yes代表包含空格
+//        }else {
+//            return NO; //反之
+//        }
+//    }
+    
+    return YES;
+}
+
+
 
 
 #pragma mark- PY 搜索栏  和代理
@@ -151,11 +195,44 @@
     
     WordChangeSpeech *speech = [[WordChangeSpeech alloc]init];
     
-    [speech read:@"大兄弟你好啊哈哈哈"];
+    [speech read:@"今天天气很好，我的心情很不错"];
     
 }
 
 
+#pragma mark- xlz 转移字符串
+- (void)recodeString:(NSDictionary *)mapDic{
+    
+    
+    NSMutableString *responseString = [mapDic valueForKey:@"weixinstr"];
+    
+    
+    NSString *character = nil;
+    
+    for (int i = 0; i < responseString.length; i ++) {
+        character = [responseString substringWithRange:NSMakeRange(i, 1)];
+        
+        if ([character isEqualToString:@"\\"])
+
+            [responseString deleteCharactersInRange:NSMakeRange(i, 1)];
+    }
+
+    //将字符窜转化成字典
+    NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
+
+    NSError *error;
+
+    NSDictionary *configFirstDic = [NSJSONSerialization JSONObjectWithData:jsonData
+
+                                                                   options:NSJSONReadingMutableContainers
+
+                                                                     error:&error];
+
+    
+    
+    
+    
+}
 
 
 

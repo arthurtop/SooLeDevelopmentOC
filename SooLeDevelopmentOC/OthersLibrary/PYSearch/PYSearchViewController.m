@@ -263,7 +263,7 @@
     // 显示搜索建议
     self.searchSuggestionHidden = NO;
     
-    // 创建搜索框
+    // 创建搜索框t
     UIView *titleView = [[UIView alloc] init];
     titleView.py_x = PYMargin * 0.5;
     titleView.py_y = 7;

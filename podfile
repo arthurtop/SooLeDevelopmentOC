@@ -8,8 +8,12 @@ pod 'AFNetworking'
 pod 'SDWebImage'
 pod 'Masonry'
 pod 'YYKit'
-pod ‘BlocksKit’
-pod ‘MBProgressHUD’
-pod ‘FMDB’
+pod 'BlocksKit'
+pod 'MBProgressHUD'  #谈框
+pod 'FMDB'           #数据库
+pod 'BaiduMapKit'    #百度地图SDK
+pod 'MJExtension'
+
 
 end
+
